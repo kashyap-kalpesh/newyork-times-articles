@@ -17,13 +17,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "eject": "react-scripts eject",
+    "lint": "eslint 'src/**/*.{js,jsx}'"
   },
   "browserslist": {
     "production": [
@@ -38,16 +33,16 @@
     ]
   },
   "devDependencies": {
-    "@eslint/compat": "^1.1.0",
     "@eslint/js": "^9.6.0",
     "autoprefixer": "^10.4.19",
-    "eslint": "9.x",
-    "eslint-config-react": "^1.1.7",
-    "eslint-config-standard": "^17.1.0",
-    "eslint-plugin-eslint-plugin": "^6.2.0",
+    "eslint": "^8.0.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jest": "^28.6.0",
+    "eslint-plugin-jsx-a11y": "^6.9.0",
     "eslint-plugin-react": "^7.34.3",
     "eslint-plugin-react-hooks": "^4.6.2",
-    "eslint-plugin-standard": "^5.0.0",
+    "eslint-plugin-testing-library": "^6.2.2",
     "globals": "^15.8.0",
     "postcss": "^8.4.39",
     "prettier": "^3.3.2",
