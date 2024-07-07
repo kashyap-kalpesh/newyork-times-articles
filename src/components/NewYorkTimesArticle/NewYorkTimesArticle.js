@@ -1,14 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-function NewYorkTimesArticle({ article }) {
+const NewYorkTimesArticle = ({ article }) => {
   /* eslint-disable camelcase */
   const {
     title,
     multimedia,
     url,
-    adx_keywords: adxKeywords, // Renamed for local use
+    adx_keywords: adxKeywords,
   } = article;
   /* eslint-enable camelcase */
 
@@ -21,10 +20,10 @@ function NewYorkTimesArticle({ article }) {
       )}
       <h3 className="text-xl font-bold mb-2">{title}</h3>
       <p className="text-gray-700 mb-4">{adxKeywords}</p>
-      <Link to={url} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">Read More</Link>
+      <a href={url} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">Read More</a>
     </div>
   );
-}
+};
 
 NewYorkTimesArticle.propTypes = {
   article: PropTypes.shape({

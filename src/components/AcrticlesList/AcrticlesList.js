@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import NewYorkTimesArticle from '../NewYorkTimesArticle';
-import getAllArticles from '../../services';
+import NewYorkTimesArticle from '../NewYorkTimesArticle/NewYorkTimesArticle';
+import getAllArticles from '../../services/getAllArticles';
 
-function ArticlesList() {
+const ArticlesList = () => {
   const [articles, setArticles] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -18,7 +18,6 @@ function ArticlesList() {
         setError(err);
       }
     };
-
     fetchData();
   }, []);
 
@@ -71,6 +70,6 @@ function ArticlesList() {
       )}
     </div>
   );
-}
+};
 
 export default ArticlesList;
